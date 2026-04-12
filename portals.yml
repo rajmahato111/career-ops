@@ -90,202 +90,246 @@ title_filter:
     - "Head"
     - "Director"
 
+# -- Location filter --
+# Applied as post-filter on Level 1 & 2 results (when location is visible in listing).
+# For Level 3 (WebSearch), location terms are injected directly into queries.
+# If a listing has no location info visible, it passes through (evaluated later).
+
+location_filter:
+  # US states/cities with highest AI/ML engineering job volume
+  us_hubs:
+    - "Remote"
+    - "United States"
+    - "US"
+    - "USA"
+    # California
+    - "San Francisco"
+    - "Bay Area"
+    - "San Jose"
+    - "Palo Alto"
+    - "Mountain View"
+    - "Menlo Park"
+    - "Sunnyvale"
+    - "Santa Clara"
+    - "San Diego"
+    - "Los Angeles"
+    - "Redwood City"
+    # New York
+    - "New York"
+    - "NYC"
+    - "Brooklyn"
+    # Washington State
+    - "Seattle"
+    - "Bellevue"
+    - "Redmond"
+    # Texas
+    - "Austin"
+    - "Dallas"
+    - "Houston"
+    # Massachusetts
+    - "Boston"
+    - "Cambridge"
+    # Virginia / DC Metro
+    - "Washington DC"
+    - "McLean"
+    - "Arlington"
+    - "Reston"
+    # Illinois
+    - "Chicago"
+    # Georgia
+    - "Atlanta"
+    # Colorado
+    - "Denver"
+    - "Boulder"
+    # North Carolina
+    - "Research Triangle"
+    - "Raleigh"
+    - "Durham"
+    # Pennsylvania
+    - "Pittsburgh"
+    # Arizona
+    - "Tempe"
+    - "chandler"
+    - "Phoenix"
+    - "Scottsdale"
+    # Florida
+    - "Miami"
+    - "Tampa"
+  # Exclude international locations
+  exclude_international:
+    - "London"
+    - "Berlin"
+    - "Paris"
+    - "Amsterdam"
+    - "Barcelona"
+    - "Madrid"
+    - "Dublin"
+    - "Singapore"
+    - "Tokyo"
+    - "Sydney"
+    - "Toronto"
+    - "Vancouver"
+    - "India"
+    - "Bangalore"
+    - "Hyderabad"
+    - "Europe"
+    - "EMEA"
+    - "APAC"
+    - "UK only"
+    - "EU only"
+    - "Canada only"
+
 # -- Search queries --
 # Each query triggers a WebSearch. Use site: to filter by portal.
 # The scanner extracts title, URL, and company from results.
 
 search_queries:
-  # -- Ashby --
-  - name: Ashby — AI PM
-    query: 'site:jobs.ashbyhq.com "AI Product Manager" OR "Senior Product Manager AI" remote'
+  # -- Ashby — US + Remote --
+  - name: Ashby — AI Engineer US
+    query: 'site:jobs.ashbyhq.com "AI Engineer" OR "LLM Engineer" OR "ML Engineer" "United States" OR "remote" OR "San Francisco" OR "New York" OR "Seattle"'
     enabled: true
 
-  - name: Ashby — Solutions Architect
-    query: 'site:jobs.ashbyhq.com "Solutions Architect" AI OR automation remote'
+  - name: Ashby — LLMOps & AI Infra US
+    query: 'site:jobs.ashbyhq.com "LLMOps" OR "AI Infrastructure" OR "AI Platform" OR "MLOps" remote OR "United States"'
     enabled: true
 
-  - name: Ashby — AI Engineer
-    query: 'site:jobs.ashbyhq.com "AI Engineer" OR "LLM Engineer" OR "Forward Deployed" remote'
+  - name: Ashby — Agentic & RAG US
+    query: 'site:jobs.ashbyhq.com "Agentic" OR "AI Agent" OR "RAG" OR "Applied AI" remote OR "United States"'
     enabled: true
 
-  - name: Ashby — Agentic
-    query: 'site:jobs.ashbyhq.com "Agentic" OR "AI Agent" OR "Automation Architect" remote'
+  - name: Ashby — Solutions Architect AI US
+    query: 'site:jobs.ashbyhq.com "Solutions Architect" OR "Forward Deployed" AI remote OR "United States"'
     enabled: true
 
-  # -- Greenhouse --
-  - name: Greenhouse — AI PM
-    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "AI Product Manager" OR "Senior Product Manager" AI remote'
+  # -- Greenhouse — US + Remote --
+  - name: Greenhouse — AI Engineer US
+    query: 'site:job-boards.greenhouse.io "AI Engineer" OR "ML Engineer" OR "LLM Engineer" "United States" OR remote'
     enabled: true
 
-  - name: Greenhouse — SA & FDE
-    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "Solutions Architect" OR "Forward Deployed" AI remote'
+  - name: Greenhouse — AI Infra & LLMOps US
+    query: 'site:job-boards.greenhouse.io "AI Infrastructure" OR "LLMOps" OR "AI Platform" OR "MLOps" remote OR "United States"'
     enabled: true
 
-  - name: Greenhouse — AI Engineer
-    query: 'site:boards.greenhouse.io OR site:job-boards.greenhouse.io "AI Engineer" OR "LLM" OR "Agentic" remote'
+  - name: Greenhouse — Agentic & Applied AI US
+    query: 'site:job-boards.greenhouse.io "Agentic" OR "AI Agent" OR "Applied AI" OR "RAG" remote OR "United States"'
     enabled: true
 
-  # -- Lever --
-  - name: Lever — AI PM
-    query: 'site:jobs.lever.co "AI Product Manager" OR "Solutions Architect" AI remote'
+  - name: Greenhouse — SA & FDE US
+    query: 'site:job-boards.greenhouse.io "Solutions Architect" OR "Forward Deployed" AI remote OR "United States"'
     enabled: true
 
-  - name: Lever — AI Roles
-    query: 'site:jobs.lever.co "AI Engineer" OR "Agentic" OR "LLMOps" OR "Automation" remote'
+  # -- Lever — US + Remote --
+  - name: Lever — AI Engineer US
+    query: 'site:jobs.lever.co "AI Engineer" OR "ML Engineer" OR "LLMOps" OR "Agentic" remote OR "United States"'
     enabled: true
 
-  # -- Wellfound (startups) --
-  - name: Wellfound — AI PM
-    query: 'site:wellfound.com "AI Product Manager" OR "AI Solutions" remote'
+  - name: Lever — AI Infra US
+    query: 'site:jobs.lever.co "AI Infrastructure" OR "AI Platform" OR "Applied AI" OR "RAG" remote OR "United States"'
     enabled: true
 
-  # -- Workable --
-  - name: Workable — AI Roles
-    query: 'site:apply.workable.com "AI" "Product Manager" OR "Solutions Architect" OR "AI Engineer" remote'
+  # -- Wellfound (US startups) --
+  - name: Wellfound — AI Engineer US
+    query: 'site:wellfound.com "AI Engineer" OR "ML Engineer" OR "LLMOps" OR "AI Infrastructure" "United States" OR remote'
     enabled: true
 
-  # -- No-Code / Low-Code / Automation --
-  - name: Ashby — No-Code & Automation
-    query: 'site:jobs.ashbyhq.com "no-code" OR "low-code" OR "automation engineer" OR "n8n" OR "Make" OR "Airtable" remote senior'
+  - name: Wellfound — Applied AI US
+    query: 'site:wellfound.com "Applied AI" OR "Agentic" OR "RAG" OR "AI Platform" "United States" OR remote'
     enabled: true
 
-  - name: Greenhouse — No-Code & Automation
-    query: 'site:job-boards.greenhouse.io "no-code" OR "low-code" OR "automation engineer" OR "business systems" senior remote'
+  # -- YC Jobs — US startups --
+  - name: YC Jobs — AI Engineer US
+    query: 'site:workatastartup.com "AI Engineer" OR "ML Engineer" OR "Applied AI" OR "LLMOps" "United States" OR remote'
     enabled: true
 
-  - name: GTM Engineer — All portals
-    query: '"GTM Engineer" OR "RevOps Engineer" OR "Growth Engineer" automation Airtable OR Make OR Clay remote'
+  - name: YC Jobs — AI Infra & Founding US
+    query: 'site:workatastartup.com "AI Infrastructure" OR "Founding Engineer" OR "AI Platform" OR "Agentic" "United States" OR remote'
     enabled: true
 
-  # -- Voice AI & Conversational AI --
-  - name: Voice AI — FDE & SA
-    query: 'site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com "Voice AI" OR "Conversational AI" OR "Speech" "Solutions" OR "Forward Deployed" OR "Customer Engineer"'
+  # -- LinkedIn (broad US discovery) --
+  - name: LinkedIn — AI Engineer US Remote
+    query: '"AI Engineer" OR "ML Engineer" OR "LLMOps Engineer" OR "AI Infrastructure Engineer" "United States" remote site:linkedin.com/jobs'
     enabled: true
 
-  - name: Voice AI — AI Engineer
-    query: 'site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com "Voice" OR "Speech" "AI Engineer" OR "Deployment" OR "Integration"'
+  - name: LinkedIn — Applied AI & Agentic US
+    query: '"Applied AI Engineer" OR "Agentic" OR "RAG Engineer" OR "AI Platform Engineer" "United States" site:linkedin.com/jobs'
     enabled: true
 
-  # -- Contact Center AI --
-  - name: Contact Center AI — SA & SE
-    query: '"contact center" OR "customer service" "AI" "Solutions Architect" OR "Solutions Engineer" OR "Forward Deployed" remote'
+  # -- Indeed / major US aggregators --
+  - name: Indeed — AI Engineer US
+    query: '"AI Engineer" OR "ML Engineer" OR "LLMOps" "United States" remote site:indeed.com'
     enabled: true
 
-  # -- FDE specific (cross-portal) --
-  - name: FDE & Deployed Engineer — All portals
-    query: '"Forward Deployed Engineer" OR "Deployed Engineer" OR "Deployment Engineer" AI site:job-boards.greenhouse.io OR site:jobs.ashbyhq.com OR site:jobs.lever.co'
+  # -- US tech hub specific --
+  - name: SF Bay Area — AI Engineer
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io "AI Engineer" OR "ML Engineer" OR "LLMOps" "San Francisco" OR "Bay Area" OR "Palo Alto" OR "Mountain View"'
     enabled: true
 
-  # -- RemoteFront (aggregator) --
-  - name: RemoteFront — AI & Automation
-    query: 'site:remotefront.com "AI Engineer" OR "Solutions Engineer" OR "Automation" OR "LLM" OR "Agent" remote'
+  - name: NYC — AI Engineer
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io "AI Engineer" OR "ML Engineer" OR "AI Infrastructure" "New York" OR "NYC"'
     enabled: true
 
-  # -- Remote-friendly Europe boards --
-
-  - name: Remotive — AI/DevRel/SA/FDE
-    query: 'site:remotive.com "AI Engineer" OR "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed" OR "DevRel" Europe'
+  - name: Seattle — AI Engineer
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io "AI Engineer" OR "ML Engineer" OR "AI Platform" "Seattle" OR "Bellevue" OR "Redmond"'
     enabled: true
 
-  - name: WeWorkRemotely — AI & DX
-    query: 'site:weworkremotely.com "AI" OR "DevRel" OR "Solutions Engineer" OR "Forward Deployed" OR "Founding Engineer"'
+  - name: Austin & Texas — AI Engineer
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io OR site:jobs.lever.co "AI Engineer" OR "ML Engineer" OR "LLMOps" "Austin" OR "Dallas" OR "Texas"'
     enabled: true
 
-  - name: Working Nomads — AI/DevRel/SA
-    query: 'site:workingnomads.com "AI Engineer" OR "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed"'
+  - name: Boston — AI Engineer
+    query: 'site:jobs.ashbyhq.com OR site:job-boards.greenhouse.io "AI Engineer" OR "ML Engineer" OR "Applied AI" "Boston" OR "Cambridge" OR "Massachusetts"'
     enabled: true
 
-  - name: EU Remote Jobs — AI/DevRel/SA
-    query: 'site:euremotejobs.com "AI" OR "DevRel" OR "Solutions Architect" OR "Forward Deployed" OR "Founding Engineer"'
+  # -- HN Who's Hiring — Remote US --
+  - name: HN Who's Hiring — Remote US AI
+    query: 'site:news.ycombinator.com "AI Engineer" OR "ML Engineer" OR "Applied AI" OR "LLMOps" OR "Founding Engineer" remote "United States"'
     enabled: true
 
-  - name: RemoteOK — AI/DevRel/SA
-    query: 'site:remoteok.com "AI Engineer" OR "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed" OR "Founding Engineer"'
+  # -- Remote-first US boards --
+  - name: WeWorkRemotely — AI Engineer US
+    query: 'site:weworkremotely.com "AI Engineer" OR "ML Engineer" OR "AI Infrastructure" OR "LLMOps" "United States"'
     enabled: true
 
-  # -- Specialized AI / Dev-Tools / FDE boards --
-
-  - name: ai-jobs.net — DevRel/SA/FDE
-    query: 'site:ai-jobs.net "Developer Advocate" OR "Solutions Architect" OR "Forward Deployed" OR "DevRel" remote Europe'
+  - name: RemoteOK — AI Engineer US
+    query: 'site:remoteok.com "AI Engineer" OR "ML Engineer" OR "LLMOps" OR "Applied AI" "United States" OR "USA"'
     enabled: true
 
-  - name: ai-jobs.net — Founding/Applied AI
-    query: 'site:ai-jobs.net "Founding Engineer" OR "Applied AI Engineer" OR "Founding" remote'
+  - name: Himalayas — Remote US AI
+    query: 'site:himalayas.app "AI Engineer" OR "ML Engineer" OR "AI Infrastructure" OR "LLMOps" "United States" OR remote'
     enabled: true
 
-  - name: fwddeploy.com — Forward Deployed roles
-    query: 'site:fwddeploy.com "Forward Deployed" OR "Deployed Engineer" remote Europe OR EMEA'
+  - name: ai-jobs.net — AI Engineer US
+    query: 'site:ai-jobs.net "AI Engineer" OR "ML Engineer" OR "LLMOps" OR "Applied AI" "United States" OR remote'
     enabled: true
 
-  - name: YC Jobs — DevRel/SA/FDE/Founding
-    query: 'site:ycombinator.com/jobs OR site:workatastartup.com "Forward Deployed" OR "Developer Advocate" OR "Founding Engineer" OR "Solutions Architect" remote'
-    enabled: true
+  # -- Disabled: non-US markets --
+  - name: EU Remote Jobs — disabled
+    query: 'site:euremotejobs.com "AI Engineer"'
+    enabled: false
 
-  - name: YC Jobs — Applied AI
-    query: 'site:workatastartup.com "Applied AI" OR "AI Engineer" OR "AI Agent" remote Europe'
-    enabled: true
+  - name: EU Data Jobs — disabled
+    query: 'site:eudatajobs.com "AI Engineer"'
+    enabled: false
 
-  # -- Spanish market specialized (high-value for Madrid/Barcelona-based candidates) --
+  - name: Manfred España — disabled
+    query: 'site:getmanfred.com "AI Engineer"'
+    enabled: false
 
-  - name: Manfred — Tech Senior España
-    query: 'site:getmanfred.com/en/job-offers "Solutions Architect" OR "DevRel" OR "Forward Deployed" OR "AI Engineer" OR "Founding"'
-    enabled: true
+  - name: Tecnoempleo — disabled
+    query: 'site:tecnoempleo.com "AI Engineer"'
+    enabled: false
 
-  - name: Manfred — Remote AI/Senior
-    query: 'site:getmanfred.com "remote" "AI" OR "Senior" OR "Staff" OR "Lead"'
-    enabled: true
+  - name: JobFluent España — disabled
+    query: 'site:jobfluent.com "AI Engineer"'
+    enabled: false
 
-  - name: Tecnoempleo — España IT
-    query: 'site:tecnoempleo.com "AI Engineer" OR "Solutions Architect" OR "DevRel" OR "Forward Deployed" OR "Founding Engineer"'
-    enabled: true
+  - name: Welcome to the Jungle España — disabled
+    query: 'site:welcometothejungle.com "AI Engineer"'
+    enabled: false
 
-  - name: Tecnoempleo — Remoto Senior
-    query: 'site:tecnoempleo.com "remoto" OR "remote" Senior "AI" OR "Architect" OR "Lead"'
-    enabled: true
-
-  - name: JobFluent — Spain startups
-    query: 'site:jobfluent.com Madrid OR Barcelona "AI" OR "Engineer" OR "Solutions" OR "DevRel"'
-    enabled: true
-
-  - name: Welcome to the Jungle — Spain tech
-    query: 'site:welcometothejungle.com Spain OR Madrid OR Barcelona "AI Engineer" OR "Solutions Architect" OR "DevRel" OR "Forward Deployed"'
-    enabled: true
-
-  # -- DevRel-specific boards --
-
-  - name: DevRelX Jobs
-    query: 'site:devrelx.com/jobs remote OR Europe OR EMEA'
-    enabled: true
-
-  - name: TrueUp — DevRel roles
-    query: 'site:trueup.io/devrel OR site:trueup.io "Developer Advocate" OR "DevRel" remote Europe'
-    enabled: true
-
-  - name: Remote Rocketship — DevRel
-    query: 'site:remoterocketship.com/jobs/developer-relations OR site:remoterocketship.com "DevRel" remote'
-    enabled: true
-
-  - name: DevRel Job board
-    query: 'site:devreljob.com remote OR Europe OR EMEA'
-    enabled: true
-
-  # -- European / global aggregators --
-
-  - name: Himalayas — Remote AI/Dev-tools
-    query: 'site:himalayas.app "AI Engineer" OR "Solutions Architect" OR "Developer Advocate" OR "Forward Deployed" OR "Founding Engineer" Europe'
-    enabled: true
-
-  - name: Jooble — España Tech Senior
-    query: 'site:jooble.org "AI Engineer" OR "Solutions Architect" OR "DevRel" Madrid OR remote España'
-    enabled: true
-
-  - name: EU Data Jobs — AI/ML Europe
-    query: 'site:eudatajobs.com "AI" OR "ML" OR "Data" "Engineer" OR "Architect" remote Europe'
-    enabled: true
-
-  - name: HN Who's Hiring — Remote AI
-    query: 'site:news.ycombinator.com OR site:hnrss.org "AI Engineer" OR "Forward Deployed" OR "DevRel" OR "Founding Engineer" remote'
-    enabled: true
+  - name: Jooble España — disabled
+    query: 'site:jooble.org "AI Engineer"'
+    enabled: false
 
 # -- Tracked companies --
 # Companies whose career pages are checked directly.
