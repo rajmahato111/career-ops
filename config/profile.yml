@@ -1,0 +1,82 @@
+# Career-Ops Profile Configuration — Raj Kumar Mahto
+
+candidate:
+  full_name: "Raj Kumar Mahto"
+  email: "rajmahato111@gmail.com"
+  phone: "(623) 445-1844"
+  location: "Tempe, AZ"
+  linkedin: "linkedin.com/in/rajmahato111"
+  github: "github.com/rajmahato111"
+  portfolio_url: "https://rajmahato111.github.io/portfolio/"
+
+target_roles:
+  primary:
+    - "AI/ML Engineer"
+    - "Senior AI Engineer"
+    - "Staff AI Engineer"
+    - "AI Infrastructure Engineer"
+    - "LLMOps Engineer"
+    - "Senior Software Engineer - AI Systems"
+  secondary:
+    - "AI Platform Engineer"
+    - "Solutions Architect - AI"
+    - "AI Solutions Engineer"
+    - "MLOps Engineer"
+    - "Agentic Systems Engineer"
+  archetypes:
+    - name: "AI/ML Engineer"
+      level: "Senior/Staff"
+      fit: "primary"
+    - name: "LLMOps / AI Platform Engineer"
+      level: "Senior/Staff"
+      fit: "primary"
+    - name: "Agentic Systems / AI Infrastructure"
+      level: "Senior"
+      fit: "primary"
+    - name: "Solutions Architect - AI"
+      level: "Senior"
+      fit: "secondary"
+    - name: "MLOps Engineer"
+      level: "Senior"
+      fit: "secondary"
+
+narrative:
+  headline: "AI Software Engineer specializing in production LLM systems, RAG pipelines, and agentic infrastructure"
+  exit_story: >
+    6+ years building production AI systems across fintech, healthcare, and enterprise.
+    From shipping a 100K+ queries/day RAG service at Infor to designing multi-agent GPU
+    provisioning at Odyn Network, I build AI that ships and scales — not just demos.
+    Currently completing an M.S. in Data Science at ASU (GPA 4.0) while working full-time.
+  superpowers:
+    - "Production RAG systems at scale (100K+ qps, <200ms latency)"
+    - "Agentic system design with LangChain, LangGraph, crewAI"
+    - "End-to-end LLMOps: embeddings, caching, observability, cost optimization"
+    - "Distributed systems and cloud-native AI infrastructure (AWS EKS, GCP, K8s)"
+    - "Polyglot engineer: Python, Go, TypeScript — picks the right tool for the job"
+  proof_points:
+    - name: "RAG Service @ Infor"
+      hero_metric: "100K+ queries/day, <200ms latency, $1K/month LLM cost savings"
+    - name: "GPU Provisioning AI Agent @ Odyn Network"
+      hero_metric: "~80% reduction in manual GPU selection effort"
+    - name: "Document Compliance Agent @ Deloitte"
+      hero_metric: "35% increase in reviewer throughput, HIPAA-compliant"
+    - name: "Code Quality Intelligence Agent"
+      hero_metric: "Multi-language AI-driven security & performance analysis"
+    - name: "Data-Readiness Scoring @ Infor"
+      hero_metric: "33M+ records processed, 40% reduction in manual validation time"
+
+compensation:
+  target_range: "$130K-180K"
+  currency: "USD"
+  minimum: "$110K"
+  location_flexibility: "Open to remote, hybrid, or on-site in AZ/major US cities"
+
+location:
+  country: "United States"
+  city: "Tempe, AZ"
+  timezone: "MST (UTC-7)"
+  visa_status: "No sponsorship needed"
+  relocation: "Open to relocation for the right opportunity"
+
+language:
+  modes_dir: "modes"   # Use 'modes/de' for DACH, 'modes/fr' for France
