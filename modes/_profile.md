@@ -85,6 +85,28 @@ Frame as: **"The engineer who bridges AI research and production reality."**
 ## Location Policy
 
 - **Remote:** Score full points — Raj works remote now
-- **Hybrid (1-3 days/week in AZ or major US city):** Score 4/5 on location dimension
-- **Relocation required outside AZ:** Score 3/5, flag it, let Raj decide
-- **On-site 4-5 days mandatory with no flexibility:** Score 1/5
+- **Hybrid (1-3 days/week in any US city):** Score 4/5 on location dimension
+- **On-site in a major US tech hub:** Score 3.5/5 — relocation is acceptable, flag it
+- **On-site 4-5 days mandatory with no flexibility:** Score 2/5 — flag but still evaluate
+- **Outside United States:** Score 1/5 — flag and recommend skipping unless exceptional
+
+## CV Location Rule (MANDATORY for PDF generation)
+
+**NEVER use "Tempe, AZ" as the location in a generated CV.** Always match the location to the job:
+
+| Job location | Use in CV header |
+|---|---|
+| Remote / no location specified | `United States (Remote)` |
+| San Francisco / Bay Area / Silicon Valley | `San Francisco Bay Area, CA` |
+| New York / NYC | `New York, NY` |
+| Seattle / Bellevue | `Seattle, WA` |
+| Austin | `Austin, TX` |
+| Boston / Cambridge | `Boston, MA` |
+| Washington DC metro | `Washington, DC` |
+| Chicago | `Chicago, IL` |
+| Atlanta | `Atlanta, GA` |
+| Denver / Boulder | `Denver, CO` |
+| Los Angeles | `Los Angeles, CA` |
+| Any other US city | Use that city + state |
+
+**Why:** Raj is open to relocation across the US. Showing a local address signals commitment to that location and removes friction in the recruiter's mind. `config/profile.yml` keeps Tempe, AZ as the true home base — only the generated CV header changes per role.
