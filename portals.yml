@@ -179,9 +179,20 @@ location_filter:
     - "EU only"
     - "Canada only"
 
+# -- Freshness filter --
+# Applied to Level 3 (WebSearch) results only. Levels 1 and 2 are real-time by nature.
+# The scan agent computes `after:YYYY-MM-DD` from today minus websearch_max_age_hours,
+# and appends it to every WebSearch query before executing.
+# Example: if today is 2026-04-12 and max_age_hours is 48, appends `after:2026-04-10`.
+
+freshness:
+  websearch_max_age_hours: 48   # Only surface WebSearch results from the last 48 hours
+
 # -- Search queries --
 # Each query triggers a WebSearch. Use site: to filter by portal.
 # The scanner extracts title, URL, and company from results.
+# NOTE: The scan agent appends `after:YYYY-MM-DD` (computed from freshness.websearch_max_age_hours)
+# to every query below at runtime. Do NOT hardcode dates here.
 
 search_queries:
   # -- Ashby — US + Remote --
