@@ -90,6 +90,42 @@
 - [ ] https://jobs.ashbyhq.com/quora/6df58d3e-855a-423e-99fd-a56ac8824b34 | Quora | AI Engineer New Grad 2025-2026 - Poe (Remote)
 - [ ] https://jobs.ashbyhq.com/quora/cb455a21-e66f-4e21-afdf-4511c6c442d1 | Quora | Machine Learning Engineer New Grad 2025-2026 - Ads, Quora (Remote)
 
+<!-- Scan 2026-04-14 — 28 new roles | Verification: unconfirmed (no Playwright in scheduled mode) -->
+
+<!-- === PRIORITY A: LLMOps / AI Platform / Agentic / Staff / FDE (2026-04-14) === -->
+- [ ] https://jobs.ashbyhq.com/hopper/2686fe5e-774a-4669-95f2-9b0d78bb5e63 | Hopper | Senior Agentic AI Software Engineer (100% Remote)
+- [ ] https://jobs.ashbyhq.com/zello/2fa8cd4a-7ddb-40c6-8577-4a004c182e80 | Zello | Applied AI Engineer
+- [ ] https://job-boards.greenhouse.io/webflow/jobs/7689676 | Webflow | Lead AI Engineer, Enterprise AI Operations
+- [ ] https://job-boards.greenhouse.io/defenseunicorns/jobs/4980238007 | Defense Unicorns | Forward Deployed AI Engineer
+- [ ] https://job-boards.greenhouse.io/grafanalabs/jobs/5839189004 | Grafana Labs | Senior Software Engineer - AI and Automation
+- [ ] https://job-boards.greenhouse.io/launchdarkly/jobs/7615560003 | LaunchDarkly | Staff Solutions Architect - AI
+- [ ] https://job-boards.greenhouse.io/mercury/jobs/5888354004 | Mercury | AI Solutions Architect
+- [ ] https://jobs.lever.co/jobgether/48a61bf4-2825-45fd-b882-5180bcd5ae9c | Jobgether | Senior AI Engineer (Remote from United States)
+- [ ] https://jobs.lever.co/smart-working-solutions/7769e501-d8bc-44c7-b00d-5081334c147c | Smart Working Solutions | LLM Engineer (Remote, Full-Time)
+- [ ] https://www.linkedin.com/jobs/view/principal-engineer-software-agentic-ai-security-at-palo-alto-networks-4234776831 | Palo Alto Networks | Principal Engineer Software (Agentic AI Security)
+- [ ] https://www.linkedin.com/jobs/view/agentic-ai-engineer-at-dpr-construction-4236736692 | DPR Construction | Agentic AI Engineer
+- [ ] https://www.workatastartup.com/jobs/71033 | StackAI | Forward Deployed AI Engineer
+- [ ] https://www.workatastartup.com/jobs/77949 | Confido | Senior ML / AI Engineer
+- [ ] https://job-boards.greenhouse.io/devrev/jobs/5528192004 | DevRev | Forward Deployed Architect
+- [ ] https://job-boards.greenhouse.io/trace3/jobs/6163178 | Trace3 | Solutions Architect | AI
+
+<!-- === PRIORITY B: Senior AI/ML Engineer (2026-04-14) === -->
+- [ ] https://jobs.ashbyhq.com/mightybot/4338903c-c692-4499-9350-9f72caa7ad0a | MightyBot | AI Engineer
+- [ ] https://jobs.ashbyhq.com/firecrawl/9837159c-880c-4912-87a9-dfcc2b40ba0a | Firecrawl | Software Engineer Agent (AI Agents Only)
+- [ ] https://jobs.ashbyhq.com/sim/c04eccb8-cbd8-4dc7-8299-b1f4c8aa1225 | Sim | Software Engineer, Agents
+- [ ] https://job-boards.greenhouse.io/reddit/jobs/7697512 | Reddit | Senior Machine Learning Engineer
+- [ ] https://job-boards.greenhouse.io/agencywithin/jobs/5056863007 | WITHIN | AI Engineer
+- [ ] https://job-boards.greenhouse.io/corestory/jobs/4984207007 | CoreStory | AI Engineer
+- [ ] https://jobs.lever.co/knownwell/263a5523-c582-42a9-a01c-36f4b1194397 | knownwell | AI Product Engineer, Clinical Tools
+- [ ] https://www.linkedin.com/jobs/view/security-engineer-ai-agentic-systems-at-uber-4399480189 | Uber | Security Engineer (AI & Agentic Systems)
+
+<!-- === PRIORITY C: Solutions Architect / Broader (2026-04-14) === -->
+- [ ] https://jobs.ashbyhq.com/lorikeet/a00d35af-2d47-4ed6-8d99-2cb1fb86e44f | Lorikeet | Solutions Architect
+- [ ] https://jobs.ashbyhq.com/fiddler-ai/640c12b9-6a07-4be1-a542-d76e4240e2ff | Fiddler AI | Solutions Architect, Customer Success - US (Remote)
+- [ ] https://job-boards.greenhouse.io/gleanwork/jobs/4508312005 | Glean | Solutions Architect
+- [ ] https://job-boards.greenhouse.io/airtable/jobs/8487502002 | Airtable | Senior Solutions Architect
+- [ ] https://jobs.ashbyhq.com/pylon-labs/d85e0773-3b3d-4d19-a45b-5d01a453179a | Pylon | Forward Deployed Architect (note: in-person SF only)
+
 ## Procesadas
 
 <!-- Evaluated offers move here -->
